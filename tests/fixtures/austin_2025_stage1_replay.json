@@ -1,0 +1,58 @@
+{
+  "event": "BLAST.tv Austin Major 2025",
+  "stage": "Stage 1",
+  "initialSeedingSnapshot": "2025-05-05",
+  "initialSeeds": [
+    "Complexity", "HEROIC", "B8", "BetBoom", "TYLOO", "Lynn Vision", "Wildcard", "FlyQuest",
+    "OG", "Chinggis Warriors", "Imperial", "Nemiga", "NRG", "Legacy", "Metizport", "Fluxo"
+  ],
+  "matches": [
+    {"round":1,"teamA":"HEROIC","teamB":"Chinggis Warriors","winner":"HEROIC","format":"bo1"},
+    {"round":1,"teamA":"Complexity","teamB":"OG","winner":"OG","format":"bo1"},
+    {"round":1,"teamA":"B8","teamB":"Imperial","winner":"B8","format":"bo1"},
+    {"round":1,"teamA":"BetBoom","teamB":"Nemiga","winner":"BetBoom","format":"bo1"},
+    {"round":1,"teamA":"TYLOO","teamB":"NRG","winner":"NRG","format":"bo1"},
+    {"round":1,"teamA":"Lynn Vision","teamB":"Legacy","winner":"Lynn Vision","format":"bo1"},
+    {"round":1,"teamA":"Wildcard","teamB":"Metizport","winner":"Wildcard","format":"bo1"},
+    {"round":1,"teamA":"FlyQuest","teamB":"Fluxo","winner":"FlyQuest","format":"bo1"},
+    {"round":2,"teamA":"B8","teamB":"OG","winner":"B8","format":"bo1"},
+    {"round":2,"teamA":"HEROIC","teamB":"NRG","winner":"HEROIC","format":"bo1"},
+    {"round":2,"teamA":"Lynn Vision","teamB":"Wildcard","winner":"Wildcard","format":"bo1"},
+    {"round":2,"teamA":"BetBoom","teamB":"FlyQuest","winner":"FlyQuest","format":"bo1"},
+    {"round":2,"teamA":"Complexity","teamB":"Fluxo","winner":"Complexity","format":"bo1"},
+    {"round":2,"teamA":"Chinggis Warriors","teamB":"Legacy","winner":"Legacy","format":"bo1"},
+    {"round":2,"teamA":"Imperial","teamB":"Nemiga","winner":"Nemiga","format":"bo1"},
+    {"round":2,"teamA":"TYLOO","teamB":"Metizport","winner":"TYLOO","format":"bo1"},
+    {"round":3,"teamA":"NRG","teamB":"Complexity","winner":"NRG","format":"bo1"},
+    {"round":3,"teamA":"BetBoom","teamB":"Legacy","winner":"BetBoom","format":"bo1"},
+    {"round":3,"teamA":"OG","teamB":"TYLOO","winner":"OG","format":"bo1"},
+    {"round":3,"teamA":"Lynn Vision","teamB":"Nemiga","winner":"Nemiga","format":"bo1"},
+    {"round":3,"teamA":"HEROIC","teamB":"FlyQuest","winner":"HEROIC","format":"bo3"},
+    {"round":3,"teamA":"B8","teamB":"Wildcard","winner":"B8","format":"bo3"},
+    {"round":3,"teamA":"Imperial","teamB":"Metizport","winner":"Imperial","format":"bo3"},
+    {"round":3,"teamA":"Chinggis Warriors","teamB":"Fluxo","winner":"Chinggis Warriors","format":"bo3"},
+    {"round":4,"teamA":"Imperial","teamB":"Legacy","winner":"Legacy","format":"bo3"},
+    {"round":4,"teamA":"Complexity","teamB":"TYLOO","winner":"TYLOO","format":"bo3"},
+    {"round":4,"teamA":"OG","teamB":"NRG","winner":"OG","format":"bo3"},
+    {"round":4,"teamA":"Lynn Vision","teamB":"Chinggis Warriors","winner":"Lynn Vision","format":"bo3"},
+    {"round":4,"teamA":"BetBoom","teamB":"Wildcard","winner":"BetBoom","format":"bo3"},
+    {"round":4,"teamA":"FlyQuest","teamB":"Nemiga","winner":"Nemiga","format":"bo3"},
+    {"round":5,"teamA":"NRG","teamB":"Lynn Vision","winner":"Lynn Vision","format":"bo3"},
+    {"round":5,"teamA":"Wildcard","teamB":"Legacy","winner":"Legacy","format":"bo3"},
+    {"round":5,"teamA":"FlyQuest","teamB":"TYLOO","winner":"TYLOO","format":"bo3"}
+  ],
+  "expectedFinalRecords": {
+    "3-0": ["B8", "HEROIC"],
+    "3-1": ["BetBoom", "OG", "Nemiga"],
+    "3-2": ["Lynn Vision", "Legacy", "TYLOO"],
+    "2-3": ["FlyQuest", "NRG", "Wildcard"],
+    "1-3": ["Imperial", "Chinggis Warriors", "Complexity"],
+    "0-3": ["Metizport", "Fluxo"]
+  },
+  "sources": [
+    "https://github.com/ValveSoftware/counter-strike_regional_standings/blob/main/live/2025/standings_global_2025_05_05.md",
+    "https://www.hltv.org/news/41746/austin-major-stage-1-opening-matchups-updated-after-legacy-replace-bestia",
+    "https://counterstrikego.com/events/blast-tv-austin-major-2025/",
+    "https://www.hltv.org/events/8436/blasttv-austin-major-2025-stage-1"
+  ]
+}

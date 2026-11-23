@@ -78,69 +78,6 @@ def test_replay_pairing_mismatch_fails_clearly(seeds: dict[str, int]) -> None:
         SwissSimulator(seeds).replay(replay)
 
 
-def test_austin_2025_stage_one_historical_replay() -> None:
-    # Seeds and results from HLTV's published Austin Stage 1 match ledger. Legacy
-    # occupied the sixth opening slot after BESTIA withdrew.
-    seeds = {
-        "Complexity": 1,
-        "HEROIC": 2,
-        "B8": 3,
-        "BETBOOM": 4,
-        "TYLOO": 5,
-        "Lynn Vision": 6,
-        "Wildcard": 7,
-        "FlyQuest": 8,
-        "OG": 9,
-        "Chinggis Warriors": 10,
-        "Imperial": 11,
-        "Nemiga": 12,
-        "NRG": 13,
-        "Legacy": 14,
-        "Metizport": 15,
-        "Fluxo": 16,
-    }
-    raw = [
-        (1, "HEROIC", "Chinggis Warriors", "HEROIC"),
-        (1, "Complexity", "OG", "OG"),
-        (1, "B8", "Imperial", "B8"),
-        (1, "BETBOOM", "Nemiga", "BETBOOM"),
-        (1, "TYLOO", "NRG", "NRG"),
-        (1, "Lynn Vision", "Legacy", "Lynn Vision"),
-        (1, "Wildcard", "Metizport", "Wildcard"),
-        (1, "FlyQuest", "Fluxo", "FlyQuest"),
-        (2, "B8", "OG", "B8"),
-        (2, "HEROIC", "NRG", "HEROIC"),
-        (2, "Lynn Vision", "Wildcard", "Wildcard"),
-        (2, "BETBOOM", "FlyQuest", "FlyQuest"),
-        (2, "Complexity", "Fluxo", "Complexity"),
-        (2, "Chinggis Warriors", "Legacy", "Legacy"),
-        (2, "Imperial", "Nemiga", "Nemiga"),
-        (2, "TYLOO", "Metizport", "TYLOO"),
-        (3, "HEROIC", "FlyQuest", "HEROIC"),
-        (3, "B8", "Wildcard", "B8"),
-        (3, "BETBOOM", "Legacy", "BETBOOM"),
-        (3, "Complexity", "NRG", "NRG"),
-        (3, "OG", "TYLOO", "OG"),
-        (3, "Lynn Vision", "Nemiga", "Nemiga"),
-        (3, "Imperial", "Metizport", "Imperial"),
-        (3, "Chinggis Warriors", "Fluxo", "Chinggis Warriors"),
-        (4, "OG", "NRG", "OG"),
-        (4, "BETBOOM", "Wildcard", "BETBOOM"),
-        (4, "Nemiga", "FlyQuest", "Nemiga"),
-        (4, "Lynn Vision", "Chinggis Warriors", "Lynn Vision"),
-        (4, "Legacy", "Imperial", "Legacy"),
-        (4, "Complexity", "TYLOO", "TYLOO"),
-        (5, "TYLOO", "FlyQuest", "TYLOO"),
-        (5, "Lynn Vision", "NRG", "Lynn Vision"),
-        (5, "Legacy", "Wildcard", "Legacy"),
-    ]
-    result = SwissSimulator(seeds).replay([ReplayOutcome(*item) for item in raw])
-    assert set(result.advanced) == {
-        "HEROIC", "B8", "OG", "BETBOOM", "Nemiga", "TYLOO", "Lynn Vision", "Legacy"
-    }
-    assert set(result.zero_three) == {"Metizport", "Fluxo"}
-
-
 def test_probability_parser_supports_labelled_arrays(seeds: dict[str, int]) -> None:
     teams = list(seeds)
     payload = {
